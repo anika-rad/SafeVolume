@@ -1,7 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- Base application theme -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Customize your theme here -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/purple_200</item>
+        <item name="android:windowBackground">#80AF99D5</item>
     </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/purple_500</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Custom SeekBar Style -->
+    <style name="CustomSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:thumbTint">#6200EE</item>
+        <item name="android:progressTint">#6200EE</item>
+    </style>
+
 </resources>

@@ -4,38 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A673AB7"
     tools:context=".MainActivity">
+
+    <!-- Current Volume Text -->
+
+    <!-- SeekBar for Threshold -->
 
     <TextView
         android:id="@+id/volumeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Volume: "
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="204dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Current Volume: "
+        android:textColor="#333333"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/monitorButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#6200EE"
+        android:text="Start Monitoring"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thresholdSeekBar"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <SeekBar
         android:id="@+id/thresholdSeekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/volumeText"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:max="15"
+        android:progressTint="#6200EE"
+        android:thumbTint="#6200EE"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volumeText" />
 
-    <Button
-        android:id="@+id/monitorButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Monitoring"
-        app:layout_constraintTop_toBottomOf="@id/thresholdSeekBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+    <!-- Button to Start Monitoring -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

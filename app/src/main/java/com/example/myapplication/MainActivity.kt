@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateVolumeText() {
         val currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
-        volumeText.text = "Volume: $currentVolume / ${thresholdSeekBar.max}\nThreshold: $loudThreshold"
+        volumeText.text = "Current Volume: $currentVolume / ${thresholdSeekBar.max}\nYour Threshold: $loudThreshold"
     }
 
     private fun toggleMonitoring() {
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
     private fun showLoudAlert() {
         AlertDialog.Builder(this)
             .setTitle("Volume Alert")
-            .setMessage("The music is too loud! Please lower the volume.")
+            .setMessage("Your media is too loud! Please lower the volume.")
             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
             .show()
     }
